@@ -16,30 +16,39 @@
 <body>
   <main>
     <div class="main-content">
-      <div class="images-container">
-        <img src="assets/images/illustration-sign-up-mobile.svg" alt="forms-main-image" class="mobile-image">
-        <img src="assets/images/illustration-sign-up-desktop.svg" alt="forms-main-image" class="desktop-image">
-      </div>
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="forms-main-image" class="mobile-image">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="forms-main-image" class="desktop-image">
 
-      <div class="forms-and-text-container">
+      <div class="text-and-form-container">
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-
+        
+        
         <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
+          <li>
+            Product discovery and building what matters
+          </li>
+  
+          <li>
+            Measuring to ensure updates are a success
+          </li>
+  
+          <li>
+            And much more!
+          </li>
         </ul>
-
+  
         <form id="form" novalidate>
-          <div>
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email">
-            <span aria-live="polite" id="email-error"></span>
+          <div class="input-areas">
+            <div class="validation-and-email-text-container">
+              <label class="email-label" for="email"><strong>Email address</strong></label>
+              <span class="email-error-message" aria-live="polite" id="email-error">Valid email required</span>
+            </div>
+            <input class="email-input" id="email" name="email" type="email" placeholder="email@company.com">
           </div>
-
-          <button>Subscribe to monthly newsletter</button>
+  
+          <button class="submit-button" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </div>
