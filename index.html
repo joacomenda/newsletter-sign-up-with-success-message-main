@@ -16,7 +16,7 @@
 <body>
 
   <main>
-    <div class="main-content">
+    <div class="main-content" id="main-content">
       <img src="assets/images/illustration-sign-up-mobile.svg" alt="mobile-illustration" class="mobile-image">
 
       <img src="assets/images/illustration-sign-up-desktop.svg" alt="desktop-illustration" class="desktop-image">
@@ -35,7 +35,7 @@
           
           <div class="spans-container">
             <label class="email" for="email">Email adress</label>
-            <span class="email-error-message" aria-live="polite" id="email-error">Valid email required</span>
+            <span class="email-error-message hidden" aria-live="polite" id="email-error">Valid email required</span>
           </div>
           <input class="email-input" id="email" name="email" type="email" placeholder="email@company.com">
           
@@ -45,11 +45,11 @@
       </div>
     </div>
 
-    <div class="success-message hidden">
+    <div class="success-message hidden" id="success-message">
       <img src="assets/images/icon-success.svg" alt="success-form-icon" class="success-image">
       <h1>Thanks for subscribing!</h1>
-      <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-      <button class="dismiss-message-button">Dismiss message</button>
+      <p>A confirmation email has been sent to <span id="success-message-email" class="success-message-email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+      <button class="dismiss-message-button" id="dismiss-button">Dismiss message</button>
     </div>
   </main>
 

@@ -160,10 +160,14 @@ body
     justify-content: space-between;
 }
 
+.success-message-email
+{
+    font-weight: 700;
+}
+
 .email-error-message
 {
     color: var(--tomato);
-    display: none;
 }
 
 .email-input
@@ -171,6 +175,13 @@ body
     padding: 0.9em;
     border: 1px solid var(--Grey);
     border-radius: 6px;
+}
+
+.email-input-error
+{
+    color: var(--tomato);
+    background-color: hsl(4, 100%, 91%);
+    border-color: var(--tomato);
 }
 
 .submit-button
@@ -181,6 +192,12 @@ body
     background-color: var(--Dark-Slate-Grey);
 
     color: var(--White);
+    cursor: pointer;
+}
+
+.submit-button:hover
+{
+    background-image: linear-gradient(to right , var(--tomato) , #ff8800);
 }
 
 /*
@@ -215,6 +232,13 @@ body
     color: white;
     background-color: var(--Dark-Slate-Grey);
     font-family: Roboto, sans-serif;
+
+    cursor: pointer;
+}
+
+.dismiss-message-button:hover
+{
+    background-image: linear-gradient(to right , var(--tomato) , #ff8800);
 }
 
 .hidden
@@ -236,4 +260,97 @@ body
 
     padding-left: 2em;
     padding-bottom: 0.3em;
+}
+
+/*
+*****************************************************************
+                            DESKTOP DESIGN
+*****************************************************************
+*/
+
+@media (min-width:900px)
+{
+    body
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 10vh;
+    }
+
+    .main-content
+    {
+        max-width: 1000px;
+        height: auto;
+
+        margin: 0 auto;
+    
+        grid-template-columns: 1fr auto;
+
+        padding: 1em;
+        border-radius: 20px;
+    }
+
+    .desktop-image
+    {
+        display: block;
+        order: 1;
+    }
+
+    .mobile-image
+    {
+        display: none;
+    }
+
+    .success-message
+    {
+        height: auto;
+        border-radius: 20px;
+        padding: 3em;
+    }
+
+/*
+*****************************************************************
+                        DEKTOP FONTSIZES
+*****************************************************************
+*/
+
+    .text-and-body-container h1
+    {
+        font-size: clamp(1.9rem, 4vw, 3rem);
+    }
+
+    .text-and-body-container p
+    {
+        font-size: clamp(0.96rem , 2vw , 1.4rem);
+    }
+
+    .text-and-body-container ul li
+    {
+        font-size: clamp(0.96rem , 2vw , 1.4rem);
+    }
+
+    .email-input
+    {
+        font-size: clamp(0.9rem , 2vw , 1.2rem);
+    }
+
+    .submit-button
+    {
+        font-size: clamp(0.9rem , 2vw , 1.2rem);
+    }
+
+    .success-message h1
+    {
+        font-size: clamp(2.5rem, 5vw, 3.3rem);
+    }
+
+    .success-message p
+    {
+        font-size: clamp(1rem , 2vw , 1.2rem);
+    }
+
+    .dismiss-message-button
+    {
+        font-size: clamp(0.9rem , 2vw , 1.2rem);
+    }
 }
