@@ -274,7 +274,8 @@ body
     {
         display: flex;
         justify-content: center;
-        margin-top: 10vh;
+        align-items: center;
+        height: 100vh;
     }
 
     .main-content
@@ -285,14 +286,21 @@ body
         margin: 0 auto;
     
         grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
+        gap: 2em;
 
-        padding: 1em;
+        padding: 1em 1em 1em 1em;
         border-radius: 20px;
+    }
+
+    .text-and-body-container
+    {
+        padding: 2em 2em 2em 2em;
     }
 
     .desktop-image
     {
-        display: block;
+        display: block; 
         order: 1;
     }
 
@@ -316,27 +324,38 @@ body
 
     .text-and-body-container h1
     {
-        font-size: clamp(1.9rem, 4vw, 3rem);
+        font-size: clamp(2.5rem, 4vw, 4rem);
     }
 
     .text-and-body-container p
     {
-        font-size: clamp(0.96rem , 2vw , 1.4rem);
+        font-size: clamp(0.8rem , 1vw , 1.4rem);
     }
 
     .text-and-body-container ul li
     {
-        font-size: clamp(0.96rem , 2vw , 1.4rem);
+        font-size: clamp(0.8rem , 1vw , 1.4rem);
     }
 
     .email-input
     {
-        font-size: clamp(0.9rem , 2vw , 1.2rem);
+        font-size: clamp(0.8rem , 1vw , 1.4rem);
     }
 
     .submit-button
     {
-        font-size: clamp(0.9rem , 2vw , 1.2rem);
+        font-size: clamp(0.8rem , 1vw , 1.4rem);
+    }
+
+    .email
+    {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .email-error-message
+    {
+        font-size: 0.9rem;
     }
 
     .success-message h1
