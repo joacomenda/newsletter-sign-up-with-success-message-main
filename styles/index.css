@@ -81,6 +81,12 @@
     font-weight: 700;
 }
 
+.dismiss-message-button
+{
+    font-weight: 700;
+    font-size: clamp(0.9rem , 2vh , 1.2rem);
+}
+
 .email
 {
     font-size: clamp(0.9rem , 2vh , 1.2rem);
@@ -89,6 +95,21 @@
 .email-error-message
 {
     font-size: clamp(0.9rem , 2vh , 1.2rem); 
+}
+
+.success-message
+{
+    padding: clamp(8em , 20vh , 10em) 1.3em 3em 1.3em;
+}
+
+.success-message h1
+{
+    font-size: clamp(2.5rem, 5vh, 3.3rem);
+}
+
+.success-message p
+{
+    font-size: clamp(1rem , 2vh , 1.2rem);
 }
 
 /*
@@ -139,6 +160,12 @@ body
     justify-content: space-between;
 }
 
+.email-error-message
+{
+    color: var(--tomato);
+    display: none;
+}
+
 .email-input
 {
     padding: 0.9em;
@@ -158,6 +185,45 @@ body
 
 /*
 *****************************************************************
+                        SUCCESS MESSAGE DISPLAY
+*****************************************************************
+*/
+
+.success-message
+{
+    background-color: white;
+    height: 100vh;
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2em;
+    
+}
+
+.dismiss-message-button
+{
+    margin-top: auto;
+    width: 100%;
+    padding: 1.3em 2em;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: var(--Dark-Slate-Grey);
+    font-family: Roboto, sans-serif;
+}
+
+.hidden
+{
+    display: none;
+}
+
+/*
+*****************************************************************
                     MARKERS DESIGN AND LI ELEMENTS
 *****************************************************************
 */
@@ -170,9 +236,4 @@ body
 
     padding-left: 2em;
     padding-bottom: 0.3em;
-}
-
-.success-message
-{
-    display: none;
 }
