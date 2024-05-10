@@ -29,9 +29,15 @@
 
 /*
 *****************************************************************
-                        IMAGES STYLINGS
+                        IMAGES BASE STYLE
 *****************************************************************
 */
+
+.mobile-image
+{
+    width: 100%;
+    display: block;
+}
 
 .desktop-image
 {
@@ -39,172 +45,131 @@
     display: none;
 }
 
-.mobile-image
-{
-    display: block;
-    width: 100%;
-}
-
 /*
 *****************************************************************
-                            FONT SIZES
+                    TYPOGRAPHY MARGINS AND PADDING
 *****************************************************************
 */
 
-.text-and-form-container h1
+.text-and-body-container h1
 {
-    font-size: 2.4rem;
+    font-size: clamp(1.9rem, 4vh, 3rem);
 }
 
-.text-and-form-container p
+.text-and-body-container p
 {
-    font-size: 1rem;
+    font-size: clamp(0.96rem , 2vh , 1.4rem);
+    line-height: 1.4;
 }
 
-.text-and-form-container ul li
+.text-and-body-container ul li
 {
-    font-size: 1rem;
+    font-size: clamp(0.96rem , 2vh , 1.4rem);
+    line-height: 1.4;
 }
 
-.email-label
+.email-input
 {
-    font-size: 0.8rem;
-}
-
-.email-error-message
-{
-    font-size: 1rem;
+    font-size: clamp(0.9rem , 2vh , 1.2rem);
+    font-family: Roboto, sans-serif;
 }
 
 .submit-button
 {
-    font-size: 1rem;
+    font-size: clamp(0.9rem , 2vh , 1.2rem);
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+}
+
+.email
+{
+    font-size: clamp(0.9rem , 2vh , 1.2rem);
+}
+
+.email-error-message
+{
+    font-size: clamp(0.9rem , 2vh , 1.2rem); 
 }
 
 /*
 *****************************************************************
-                        MOBILE FIRST LAYOUT
+                        MOBILE FIRST DESIGN
 *****************************************************************
 */
 
 body
 {
+    background-color: var(--Charcoal-Grey);
     font-family: Roboto, sans-serif;
-    line-height: 1.4rem;
+
+    color: var(--Dark-Slate-Grey);
 }
 
 .main-content
 {
+    background-color: var(--White);
     height: 100vh;
+    max-width: 500px;
+
     margin: 0 auto;
-    max-width: 400px;
 
     display: grid;
-
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
 }
 
-.text-and-form-container
+.text-and-body-container
 {
-    padding: 2em 2em;
+    display: grid;
+    align-content: space-evenly;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly
+    padding: 0 1.5em;
 }
 
-/*
-*****************************************************************
-                FORMS AND TEXT CONTAINER STYLES
-*****************************************************************
-*/
-
-.text-and-form-container h1
-{
-    color: var(--Dark-Slate-Grey);
-}
-
-.text-and-form-container p
-{
-    color: var(--Dark-Slate-Grey);
-}
-
-.text-and-form-container ul li
-{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-
-    margin-bottom: 0.5rem;
-
-    color: var(--Dark-Slate-Grey);
-}
-
-.text-and-form-container ul li::before
-{
-    content: "";
-    background-image: url(../assets/images/icon-list.svg);
-    width: 21px;
-    height: 21px;
-
-    margin-right: 0.8rem;
-}
-
-#form
+.form
 {
     display: flex;
     flex-direction: column;
+    gap: 0.9em;
+}
+
+.spans-container
+{
+    display: flex;
     justify-content: space-between;
-}
-
-.input-areas
-{
-    margin-bottom: 1rem;
-}
-
-.validation-and-email-text-container
-{
-    display:flex;
-    justify-content: space-between;
-}
-
-.email-error-message
-{
-    display: none;
-    color: var(--Dark-Slate-Grey);
-}
-
-.email-label
-{
-    color: var(--Charcoal-Grey);
 }
 
 .email-input
 {
-    display: block;
-    width: 100%;
-
-    padding: 1em;
-
-    border: var(--Grey) solid 1px;
+    padding: 0.9em;
+    border: 1px solid var(--Grey);
     border-radius: 6px;
-
-    font-family: Roboto;
 }
 
 .submit-button
 {
-    padding: 1em;
-    
+    padding: 0.9em;
     border: none;
     border-radius: 6px;
     background-color: var(--Dark-Slate-Grey);
 
-    font-weight: 500;
-    color: white;   
+    color: var(--White);
+}
 
-    font-family: Roboto;
+/*
+*****************************************************************
+                    MARKERS DESIGN AND LI ELEMENTS
+*****************************************************************
+*/
+
+.text-and-body-container ul li
+{
+    background: url(../assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    list-style: none;
+
+    padding-left: 2em;
+    padding-bottom: 0.3em;
 }
 
 .success-message

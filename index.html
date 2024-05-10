@@ -14,53 +14,41 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
+
   <main>
     <div class="main-content">
-      <img src="assets/images/illustration-sign-up-mobile.svg" alt="forms-main-image" class="mobile-image">
-      <img src="assets/images/illustration-sign-up-desktop.svg" alt="forms-main-image" class="desktop-image">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="mobile-illustration" class="mobile-image">
 
-      <div class="text-and-form-container">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="desktop-illustration" class="desktop-image">
+
+      <div class="text-and-body-container">
         <h1>Stay updated!</h1>
-
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        
-        
+
         <ul>
-          <li>
-            Product discovery and building what matters
-          </li>
-  
-          <li>
-            Measuring to ensure updates are a success
-          </li>
-  
-          <li>
-            And much more!
-          </li>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
         </ul>
-  
-        <form id="form" novalidate>
-          <div class="input-areas">
-            <div class="validation-and-email-text-container">
-              <label class="email-label" for="email"><strong>Email address</strong></label>
-              <span class="email-error-message" aria-live="polite" id="email-error">Valid email required</span>
-            </div>
-            <input class="email-input" id="email" name="email" type="email" placeholder="email@company.com">
+
+        <form class="form" id="form" novalidate>
+          
+          <div class="spans-container">
+            <label class="email" for="email">Email adress</label>
+            <span class="email-error-message" aria-live="polite" id="email-error">Valid email required</span>
           </div>
-  
+          <input class="email-input" id="email" name="email" type="email" placeholder="email@company.com">
+          
           <button class="submit-button" type="submit">Subscribe to monthly newsletter</button>
+
         </form>
       </div>
     </div>
 
     <div class="success-message">
-      <img src="assets/images/icon-success.svg" alt="success-forms-submition-image">
-
+      <img src="assets/images/icon-success.svg" alt="success-form-icon">
       <h1>Thanks for subscribing!</h1>
-
-      <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
-      </p>
-
+      <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
       <button>Dismiss message</button>
     </div>
   </main>
